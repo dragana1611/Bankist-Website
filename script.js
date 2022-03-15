@@ -283,3 +283,28 @@ function handleScroll() {
   }
 }
 document.addEventListener('scroll', handleScroll);
+
+// Smooth scroll to top:
+//button
+backtotop.addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
+
+//footer nav
+const footerLinks = document.querySelectorAll('.footer__link')
+
+footerLinks.forEach(fLink =>{
+  fLink.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  })
+})
